@@ -18,6 +18,7 @@ namespace SimpleChoise
         public void Next()
         {
             GamePoints.SimpleChoise++;
+            ChoiceTimer.GlobalTime -= 1f;
             // TODO Remake Reload 
             SceneManager.LoadScene("SimpleChoise");
             Debug.Log("win: " + GamePoints.SimpleChoise);
