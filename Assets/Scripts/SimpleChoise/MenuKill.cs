@@ -24,6 +24,7 @@ public class MenuKill : MonoBehaviour
 
     public void ReturnGame()
     {
+        Debug.Log(ChoiceTimer.GlobalTime);
         SceneManager.LoadScene(1);
         Time.timeScale = 1;
     }
