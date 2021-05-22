@@ -19,6 +19,9 @@ namespace SimpleChoise
             _menuKill = MenuKill.KillMenu;
             Time.timeScale = 0;
             _menuKill.SetActive(true);
+            GamePoints.SimpleChoiсe = 0;
+            ChoiceTimer.GlobalTime = 15f;
+            Debug.Log(ChoiceTimer.GlobalTime);
         }
 
         public void Next()

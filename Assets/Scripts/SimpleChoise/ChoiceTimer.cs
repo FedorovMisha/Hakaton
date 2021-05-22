@@ -8,19 +8,17 @@ using UnityEngine.UI;
 
 public class ChoiceTimer : MonoBehaviour
 {
-    private static float _globalTime = 5f;
+    private static float _globalTime = 15f;
     public static float GlobalTime
     {
         get => _globalTime;
         set
         {
-            if (_globalTime < 2f)
+            _globalTime = value;
+            
+            if (_globalTime < 1f)
             {
                 _globalTime = 1f;
-            }
-            else
-            {
-                _globalTime = value;
             }
         }
     }
@@ -30,6 +28,7 @@ public class ChoiceTimer : MonoBehaviour
     private IGameEnd _gameEnd;
 
     private Text _text;
+    
     private void Start()
     {
         currentTime = GlobalTime;
@@ -44,7 +43,6 @@ public class ChoiceTimer : MonoBehaviour
         if (currentTime <= 0f)
         {
             _gameEnd.GameOver();
-            
         }
     }
 }
