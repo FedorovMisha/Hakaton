@@ -16,6 +16,6 @@ public class GamePointsUpdate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        _text.text = "Points: " + GamePoints.SimpleChoise;
+        _text.text = "Points: " + GamePoints.SimpleChoiсe;
     }
 }
