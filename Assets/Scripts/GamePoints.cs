@@ -1,7 +1,4 @@
-﻿namespace DefaultNamespace
+﻿public static class GamePoints
 {
-    public static class GamePoints
-    {
-        public static int SimpleChoise { get; set; } = 0;
-    }
+    public static int SimpleChoise { get; set; } = 0;
 }

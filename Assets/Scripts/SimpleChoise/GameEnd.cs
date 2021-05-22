@@ -1,5 +1,7 @@
 ﻿using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Scene = UnityEditor.SearchService.Scene;
 
 namespace SimpleChoise
 {
@@ -9,12 +11,16 @@ namespace SimpleChoise
 
         public void GameOver()
         {
+            SceneManager.LoadScene("LoseScene");
             Debug.Log("Lose");
         }
 
         public void Next()
         {
-            Debug.Log("win");
+            GamePoints.SimpleChoise++;
+            // TODO Remake Reload 
+            SceneManager.LoadScene("SimpleChoise");
+            Debug.Log("win: " + GamePoints.SimpleChoise);
         }
     }
 }
