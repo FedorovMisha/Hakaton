@@ -12,26 +12,26 @@ public class Choice : MonoBehaviour
 
     [FormerlySerializedAs("Sprite")] [SerializeField]private Sprite sprite;
 
-    public IGameEnd GameEnd; 
+    public Action Tap { get; set; } 
     
     public Choice ComparerChoice { get; set; }
-    
-    
-    
+
+    public void Start()
+    {
+        GetComponent<SpriteRenderer>().sprite = sprite;
+        transform.localScale = transform.localScale * 2;
+    }
+
     private void OnMouseDown()
     {
         Debug.Log("Click");
-
+        Tap.Invoke();
         if (ComparerChoice != null)
         {
             if (ComparerChoice.ChoiceType == this.ChoiceType)
             {
-                GamePoints.SimpleChoise++;
-                GameEnd.Next();
-                return;
+                Tap.Invoke();
             }
-            
-            GameEnd.GameOver();
         }
     }
 }
