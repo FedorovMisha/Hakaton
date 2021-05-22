@@ -2,6 +2,8 @@
 {
     public interface IGameEnd
     {
-        void GameEnd();
+        void GameOver();
+
+        void Next();
     }
 }

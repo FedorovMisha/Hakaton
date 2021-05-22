@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 public class Choice : MonoBehaviour
 {
-    [FormerlySerializedAs("ChoiceType")] [SerializeField]private ChoiceTypes choiceType;
+    public ChoiceTypes ChoiceType { get; set; }
 
     [FormerlySerializedAs("Sprite")] [SerializeField]private Sprite sprite;
 
@@ -24,7 +24,14 @@ public class Choice : MonoBehaviour
 
         if (ComparerChoice != null)
         {
+            if (ComparerChoice.ChoiceType == this.ChoiceType)
+            {
+                GamePoints.SimpleChoise++;
+                GameEnd.Next();
+                return;
+            }
             
+            GameEnd.GameOver();
         }
     }
 }
