@@ -12,26 +12,38 @@ public class Choice : MonoBehaviour
 
     [FormerlySerializedAs("Sprite")] [SerializeField]private Sprite sprite;
 
-    public IGameEnd GameEnd; 
+    public Action Tap { get; set; } 
     
     public Choice ComparerChoice { get; set; }
-    
-    
-    
+
+    public void Start()
+    {
+        GetComponent<SpriteRenderer>().sprite = sprite;
+        transform.localScale = transform.localScale * 2;
+    }
+
     private void OnMouseDown()
     {
         Debug.Log("Click");
+        Tap.Invoke();
+        // if (ComparerChoice != null)
+        // {
+        //     if (ComparerChoice.ChoiceType == this.ChoiceType)
+        //     {
+        //         Tap.Invoke();
+        //     }
+        // }
+    }
+    
+    private void OnMouseEnter()
+    {
+        gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x + 0.2f,
+            gameObject.transform.localScale.y + 0.2f, gameObject.transform.localScale.z + 0.2f);
+    }
 
-        if (ComparerChoice != null)
-        {
-            if (ComparerChoice.ChoiceType == this.ChoiceType)
-            {
-                GamePoints.SimpleChoise++;
-                GameEnd.Next();
-                return;
-            }
-            
-            GameEnd.GameOver();
-        }
+    private void OnMouseExit()
+    {
+        gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x - 0.2f,
+            gameObject.transform.localScale.y - 0.2f, gameObject.transform.localScale.z - 0.2f);;
     }
 }
