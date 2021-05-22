@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MyFlappyBird.unity
     guid: 1989d9d7097d20f4aa50837c08d9ed87
   - enabled: 1
+    path: Assets/Scenes/EdibleInedible.unity
+    guid: 8ddf43bb1969ddf4f918ff43e661f2ba
+  - enabled: 1
     path: Assets/Scenes/LoseScene.unity
     guid: 59f571408c9ccc54b917ea4c3ec9fed1
   m_configObjects: {}
