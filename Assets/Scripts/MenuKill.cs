@@ -16,16 +16,10 @@ public class MenuKill : MonoBehaviour
         KillMenu = killMenuObj;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ReturnGame()
     {
-        Debug.Log(ChoiceTimer.GlobalTime);
-        SceneManager.LoadScene(1);
+        // Debug.Log(ChoiceTimer.GlobalTime);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
 

@@ -8,7 +8,12 @@ namespace FlappyBird
     {
         public void GameOver()
         {
-            SceneManager.LoadScene("LoseScene");
+            Debug.Log("GameOver");
+            
+            Debug.Log(SceneManager.GetActiveScene().buildIndex - 1);
+            MovingBlock.Speed = 6f;
+            Time.timeScale = 0;
+            MenuKill.KillMenu.SetActive(true);
         }
 
         public void Next()
