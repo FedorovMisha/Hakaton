@@ -21,12 +21,12 @@ namespace EdibleInedible
             {
                 if (State.EdibleState == EdibleInedibleStatus.Edible)
                 {
-                    _text.text = "Не сьедобное";
+                    _text.text = "Inedible";
                     State.EdibleState = EdibleInedibleStatus.Inedible;
                 }
                 else
                 {
-                    _text.text = "Cьедобное";
+                    _text.text = "Edible";
                     State.EdibleState = EdibleInedibleStatus.Edible;
                 }
 
