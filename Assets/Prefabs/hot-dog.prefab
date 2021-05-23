@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5957199542244430743}
   - component: {fileID: 1546588792507209516}
   - component: {fileID: 3830894197199530272}
+  - component: {fileID: -9119484611705484587}
   m_Layer: 0
   m_Name: hot-dog
   m_TagString: Untagged
@@ -132,7 +133,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6112124070643465509}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -144,4 +145,16 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
+--- !u!114 &-9119484611705484587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6112124070643465509}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6161dc1727154de8ad4f566463c095f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
